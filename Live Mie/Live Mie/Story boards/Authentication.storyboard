@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="feC-WV-Cqk">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="52I-O9-evD">
+            <objects>
+                <viewController storyboardIdentifier="login_vc" id="feC-WV-Cqk" customClass="LoginViewController" customModule="Live_Mie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vcV-mX-ZIH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNA-QF-mDS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.44705882349999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="jDI-zh-gvY" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="794"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_center" translatesAutoresizingMaskIntoConstraints="NO" id="WqV-0b-ueQ">
+                                        <rect key="frame" x="147" y="80" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="WqV-0b-ueQ" secondAttribute="height" multiplier="1:1" id="Id4-1s-Jbj"/>
+                                            <constraint firstAttribute="width" constant="120" id="oQ5-qp-8YC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="h9z-lp-wEM">
+                                        <rect key="frame" x="20" y="236" width="374" height="208"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PvS-A0-Vbj" customClass="CCTextField" customModule="Live_Mie" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="iGK-fl-jvM"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="email"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="yPadding">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="xPadding">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="feC-WV-Cqk" id="Fn0-2Z-Q70"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z4h-ns-SAu" customClass="CCTextField" customModule="Live_Mie" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="56" width="374" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="yPadding">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="xPadding">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="feC-WV-Cqk" id="Bf9-cf-Yx0"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="en2-mh-HiN" customClass="CCButton" customModule="Live_Mie" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="112" width="374" height="40"/>
+                                                <color key="backgroundColor" red="0.30196078431372547" green="0.44705882352941173" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Login">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onLoginClick:" destination="feC-WV-Cqk" eventType="touchUpInside" id="Bkj-GY-P4e"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVS-9Z-n3Y">
+                                                <rect key="frame" x="0.0" y="168" width="374" height="40"/>
+                                                <state key="normal" title="Forgot Password?">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onForgotPassowrd:" destination="feC-WV-Cqk" eventType="touchUpInside" id="YpC-hb-IpJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="h9z-lp-wEM" firstAttribute="top" secondItem="WqV-0b-ueQ" secondAttribute="bottom" constant="36" id="H0L-YI-cga"/>
+                                    <constraint firstItem="h9z-lp-wEM" firstAttribute="leading" secondItem="jDI-zh-gvY" secondAttribute="leading" constant="20" id="Oz0-2g-dbt"/>
+                                    <constraint firstItem="h9z-lp-wEM" firstAttribute="centerX" secondItem="jDI-zh-gvY" secondAttribute="centerX" id="V1x-8w-40c"/>
+                                    <constraint firstItem="WqV-0b-ueQ" firstAttribute="top" secondItem="jDI-zh-gvY" secondAttribute="top" constant="80" id="ehi-BH-DSm"/>
+                                    <constraint firstAttribute="bottom" secondItem="h9z-lp-wEM" secondAttribute="bottom" constant="16" id="fZM-xW-TVj"/>
+                                    <constraint firstItem="WqV-0b-ueQ" firstAttribute="centerX" secondItem="jDI-zh-gvY" secondAttribute="centerX" id="hZW-JV-2rn"/>
+                                    <constraint firstAttribute="trailing" secondItem="h9z-lp-wEM" secondAttribute="trailing" constant="20" id="okH-E1-QP2"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQI-A5-gxK" customClass="CCButton" customModule="Live_Mie" customModuleProvider="target">
+                                <rect key="frame" x="20" y="802" width="374" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2CP-Uf-Bd3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Want to Join? Register Now">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.44705882349999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="pPp-m9-ekv" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="5n8-WI-XXc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30196078431372547" green="0.44705882352941173" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="CNA-QF-mDS" firstAttribute="trailing" secondItem="vbm-Hh-R7C" secondAttribute="trailing" id="4DY-Pu-4Ly"/>
+                            <constraint firstItem="jDI-zh-gvY" firstAttribute="leading" secondItem="vbm-Hh-R7C" secondAttribute="leading" id="7I4-x7-ZHT"/>
+                            <constraint firstItem="vbm-Hh-R7C" firstAttribute="trailing" secondItem="VQI-A5-gxK" secondAttribute="trailing" constant="20" id="Ba0-rp-raI"/>
+                            <constraint firstItem="CNA-QF-mDS" firstAttribute="leading" secondItem="vbm-Hh-R7C" secondAttribute="leading" id="Cvh-2W-d8D"/>
+                            <constraint firstItem="CNA-QF-mDS" firstAttribute="top" secondItem="vcV-mX-ZIH" secondAttribute="top" id="EN0-s4-XJX"/>
+                            <constraint firstItem="VQI-A5-gxK" firstAttribute="leading" secondItem="vbm-Hh-R7C" secondAttribute="leading" constant="20" id="QsC-bS-uqp"/>
+                            <constraint firstItem="jDI-zh-gvY" firstAttribute="top" secondItem="vcV-mX-ZIH" secondAttribute="top" id="ST1-lI-dIL"/>
+                            <constraint firstItem="jDI-zh-gvY" firstAttribute="trailing" secondItem="vbm-Hh-R7C" secondAttribute="trailing" id="j5J-w4-gYK"/>
+                            <constraint firstAttribute="bottom" secondItem="CNA-QF-mDS" secondAttribute="bottom" id="kPB-BQ-x53"/>
+                            <constraint firstItem="VQI-A5-gxK" firstAttribute="bottom" secondItem="vbm-Hh-R7C" secondAttribute="bottom" constant="-20" id="lFs-y6-R5n"/>
+                            <constraint firstItem="VQI-A5-gxK" firstAttribute="top" secondItem="jDI-zh-gvY" secondAttribute="bottom" constant="8" id="nTp-Jg-d58"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vbm-Hh-R7C"/>
+                    </view>
+                    <connections>
+                        <outlet property="backView" destination="CNA-QF-mDS" id="UIV-Mh-UO2"/>
+                        <outlet property="tfEmail" destination="PvS-A0-Vbj" id="WhK-bt-9fT"/>
+                        <outlet property="tfPassword" destination="Z4h-ns-SAu" id="24h-5L-Mty"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dU0-1d-DAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1175.2" y="114.53201970443351"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="hFX-0h-3xG">
+            <objects>
+                <viewController id="pPp-m9-ekv" customClass="RegisterViewController" customModule="Live_Mie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zjw-gu-9P9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcl-hK-PD2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.44705882349999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="WJy-eM-TgS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_center" translatesAutoresizingMaskIntoConstraints="NO" id="pPd-LV-NZX">
+                                        <rect key="frame" x="147" y="80" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="LA7-BP-amL"/>
+                                            <constraint firstAttribute="width" secondItem="pPd-LV-NZX" secondAttribute="height" multiplier="1:1" id="dR4-KF-5Vl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="G9d-kb-Hbg">
+                                        <rect key="frame" x="20" y="236" width="374" height="320"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ck-xW-w8s" customClass="CCTextField" customModule="Live_Mie" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Mrn-dT-5ow"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="yPadding">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="xPadding">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="pPp-m9-ekv" id="OHe-WF-KPh"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HGJ-nP-OQT" customClass="CCTextField" customModule="Live_Mie" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="56" width="374" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="G3J-e1-HKV"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="yPadding">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="xPadding">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="pPp-m9-ekv" id="ToU-qH-1lZ"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JgT-s2-VAV" customClass="CCTextField" customModule="Live_Mie" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="112" width="374" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="yPadding">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="xPadding">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="pPp-m9-ekv" id="yLY-ft-odW"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WA9-Cg-ksK" customClass="CCTextField" customModule="Live_Mie" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="168" width="374" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="yPadding">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="xPadding">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="pPp-m9-ekv" id="kSR-j7-fOc"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P12-7F-wjv" customClass="CCButton" customModule="Live_Mie" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="224" width="374" height="40"/>
+                                                <color key="backgroundColor" red="0.30196078430000001" green="0.44705882349999998" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Register">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onRegisterClick:" destination="pPp-m9-ekv" eventType="touchUpInside" id="Ves-oy-DYB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B48-JS-TSj">
+                                                <rect key="frame" x="0.0" y="280" width="374" height="40"/>
+                                                <state key="normal" title="Already have an account?">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onBackClick:" destination="pPp-m9-ekv" eventType="touchUpInside" id="1ds-6Z-pSH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="G9d-kb-Hbg" secondAttribute="bottom" constant="16" id="0Dm-ES-8D0"/>
+                                    <constraint firstItem="G9d-kb-Hbg" firstAttribute="leading" secondItem="WJy-eM-TgS" secondAttribute="leading" constant="20" id="5h5-d7-SNm"/>
+                                    <constraint firstItem="G9d-kb-Hbg" firstAttribute="top" secondItem="pPd-LV-NZX" secondAttribute="bottom" constant="36" id="STk-Kl-7sC"/>
+                                    <constraint firstItem="pPd-LV-NZX" firstAttribute="centerX" secondItem="WJy-eM-TgS" secondAttribute="centerX" id="aPl-kb-blx"/>
+                                    <constraint firstAttribute="trailing" secondItem="G9d-kb-Hbg" secondAttribute="trailing" constant="20" id="h1n-PD-xam"/>
+                                    <constraint firstItem="pPd-LV-NZX" firstAttribute="top" secondItem="WJy-eM-TgS" secondAttribute="top" constant="80" id="h3k-La-Jfk"/>
+                                    <constraint firstItem="G9d-kb-Hbg" firstAttribute="centerX" secondItem="WJy-eM-TgS" secondAttribute="centerX" id="jzY-Ef-vnK"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30196078430000001" green="0.44705882349999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WJy-eM-TgS" secondAttribute="bottom" id="Be8-38-lFP"/>
+                            <constraint firstItem="zcl-hK-PD2" firstAttribute="trailing" secondItem="dRL-Lf-h73" secondAttribute="trailing" id="P61-6M-cAh"/>
+                            <constraint firstItem="zcl-hK-PD2" firstAttribute="leading" secondItem="dRL-Lf-h73" secondAttribute="leading" id="PuB-xh-h67"/>
+                            <constraint firstItem="WJy-eM-TgS" firstAttribute="top" secondItem="zjw-gu-9P9" secondAttribute="top" id="Uck-bz-IDQ"/>
+                            <constraint firstItem="WJy-eM-TgS" firstAttribute="leading" secondItem="dRL-Lf-h73" secondAttribute="leading" id="Zvh-LF-81e"/>
+                            <constraint firstAttribute="bottom" secondItem="zcl-hK-PD2" secondAttribute="bottom" id="gJy-rx-7xU"/>
+                            <constraint firstItem="zcl-hK-PD2" firstAttribute="top" secondItem="zjw-gu-9P9" secondAttribute="top" id="qed-H3-oBf"/>
+                            <constraint firstItem="WJy-eM-TgS" firstAttribute="trailing" secondItem="dRL-Lf-h73" secondAttribute="trailing" id="wI3-le-TlC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dRL-Lf-h73"/>
+                    </view>
+                    <connections>
+                        <outlet property="backView" destination="zcl-hK-PD2" id="28i-WZ-WTj"/>
+                        <outlet property="tfConfirmPassword" destination="WA9-Cg-ksK" id="Eox-WB-lnw"/>
+                        <outlet property="tfEmail" destination="HGJ-nP-OQT" id="qzg-zl-spt"/>
+                        <outlet property="tfName" destination="1Ck-xW-w8s" id="9zb-Ci-1Ic"/>
+                        <outlet property="tfPassword" destination="JgT-s2-VAV" id="koM-pH-z4x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y45-JP-1t0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-378.39999999999998" y="114.53201970443351"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_center" width="800" height="800"/>
+    </resources>
+</document>
